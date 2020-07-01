@@ -1,0 +1,14 @@
+<div class="list-group ml-4 mt-4 col-md-4">
+    {{#each Teams}}
+    <form action="/eliminar-equipo/{{_id}}?_method=DELETE" method="POST">
+        <input type="hidden" name="_method" value="DELETE">
+        <div class="d-flex block justify-content-space-between">
+        <li class="list-group-item list-group-item-action">
+            {{name}}
+            
+        </li>
+        <button class="btn btn-danger mb-1  float-right">X</button>
+        </div>
+    </form>
+    {{/each}}
+</div>
